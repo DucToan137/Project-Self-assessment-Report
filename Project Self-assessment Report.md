@@ -12,7 +12,7 @@ Video:
 
 | Student ID | Full name       | Git account | Contribution                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Contribution percentage (100% total) | Expected total points | Final total points |
 | :--------- | :-------------- | :---------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------- | :-------------------- | :----------------- |
-| 22120376   | Nguyễn Đức Toàn | DucToan137  | - Xây dựng giao diện Đăng ký, Đăng nhập.<br />- Xây dựng giao diện List View, Kanban View.<br />- Xây dựng tính năng Snoozed Email (Backend, Frontend). <br />- Xây dựng tính năng gửi mail (cc, bcc, reply, forward, đính kèm file,...) ở Frontend.<br /> - Xây dựng tính năng Thêm, Xóa, Đổi tên cột trong giao diện Kanban View (Frontend).<br />- Xây dựng tính năng Search, Sort, Filter trong giao diện Kanban View (Frontend).                                                                                                                                                                                                                                                                | 33%                                  | 10                    |                    |
+| 22120376   | Nguyễn Đức Toàn | DucToan137  | - Xây dựng giao diện Đăng ký, Đăng nhập.<br />- Xây dựng giao diện List View, Kanban View.<br />- Xây dựng tính năng Snooze Email (Backend, Frontend). <br />- Xây dựng tính năng gửi mail (cc, bcc, reply, forward, đính kèm file,...) ở Frontend.<br /> - Xây dựng tính năng Thêm, Xóa, Đổi tên cột trong giao diện Kanban View (Frontend).<br />- Xây dựng tính năng Search, Sort, Filter trong giao diện Kanban View (Frontend).                                                                                                                                                                                                                                                                 | 33%                                  | 10                    |                    |
 | 22120433   | Lê Quang Vinh   | DINH1022    | \<List of tasks done by student 2\>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 33%                                  | 10                    |                    |
 | 22120434   | Lê Thành Vinh   | LTVINH24    | - Xây dựng cơ bản giao diện List View 3 Columns (Mailboxes, EmailList, EmailDetail)`<br>` - Xây dựng Proxy Mail (Backend): fetch email từ Gmail, phân trang email, hiển thị chi tiết email, danh sách các mailboxes, modify label, gửi mail (to, cc, bcc, reply, forward,…). `<br>` - Xây dựng cơ bản giao diện Kanban View với các KanbanColumn, KanbanCard, thao tác Drag & Drop card giữa các column. `<br>` - Xây dựng tính năng Fuzzy Search (Backend) `<br>` - Xây dựng tính năng Sematic Search (Backend) `<br>` - Xây dựng API quản lý KanbanColumn (create, delete, rename). `<br>` - Xây dựng các tính năng nâng cao: Keyboard navigation, Multi-tab logout sync, Dockerfile cho frontend. | 34%                                  | 10                    |                    |
 
@@ -125,23 +125,96 @@ Students must input minus points to every uncompleted feature in the SE column.
 
 _List significant commits here with format:_
 
-| Date       | Author     | Commit Message                                                | Files Changed | Repository |
-| :--------- | :--------- | :------------------------------------------------------------ | :------------ | :--------- |
-| 19-11-2025 | DINH1022   | normal auth                                                   | 1             | Backend    |
-| 27-11-2025 | LTVINH24   | feat: implement get list email and get email detail           | 10            | Backend    |
-| 01-12-2025 | DINH1022   | google auth                                                   | 7             | Backend    |
-| 02-12-2025 | DucToan137 | feat(mail): stream attachments                                | 2             | Backend    |
-| 09-12-2025 | DucToan137 | feat(snooze): add workflow Email entity, snooze email         | 12            | Backend    |
-| 10-12-2025 | DINH1022   | summary mail                                                  | 3             | Backend    |
-| 14-01-2026 | LTVINH24   | feat: CURD kanban column for user                             | 7             | Backend    |
-| 18-11-2025 | LTVINH24   | initial project and mock email dashboard ui                   | 39            | Frontend   |
-| 02-12-2025 | DucToan137 | feat(email): lazy-load thread details + skeleton UI           | 4             | Frontend   |
-| 03-12-2025 | DINH1022   | oauth flow                                                    | 4             | Frontend   |
-| 09-12-2025 | LTVINH24   | feat: create kanban view layout                               | 5             | Frontend   |
-| 09-12-2025 | DucToan137 | feat(snooze): connect services                                | 8             | Frontend   |
-| 17-12-2025 | DINH1022   | feat : sort email                                             | 1             | Frontend   |
-| 23-12-2025 | DucToan137 | feat(search): implement Semantic search and integrate service | 6             | Frontend   |
-| 18-01-2026 | DucToan137 | feat: Multi-tab logout sync                                   | 2             | Frontend   |
+| Date       | Author     | Commit Message                                                                         | Files Changed | Repository         |
+| :--------- | :--------- | :------------------------------------------------------------------------------------- | :-----------: | :----------------- |
+| 2026-01-20 | DucToan137 | fix: handle exception snoozed time.                                                    |       1       | AIEmail (Frontend) |
+| 2026-01-20 | DucToan137 | feat: skeleton in kanban view                                                          |       5       | AIEmail (Frontend) |
+| 2026-01-20 | DucToan137 | feat: search in kanban view                                                            |       7       | AIEmail (Frontend) |
+| 2026-01-20 | DucToan137 | Merge pull request #5 from LTVINH24/feat/refactor                                      |      45       | AIEmail (Frontend) |
+| 2026-01-20 | DucToan137 | Merge remote-tracking branch 'origin/main' into feat/refactor                          |       0       | AIEmail (Frontend) |
+| 2026-01-20 | DucToan137 | Merge branch 'feat/refactor' of https://github.com/LTVINH24/AIEmail into feat/refactor |       2       | AIEmail (Frontend) |
+| 2026-01-20 | DucToan137 | fix: responsive in kanban view, loading more mail in Inbox                             |       6       | AIEmail (Frontend) |
+| 2026-01-20 | LTVINH24   | feat: add sort & filter after search                                                   |       1       | AIEmail (Frontend) |
+| 2026-01-20 | LTVINH24   | fix: add snippet for fuzzy search                                                      |       1       | AIEmail (Frontend) |
+| 2026-01-19 | DucToan137 | fix: UI                                                                                |       2       | AIEmail (Frontend) |
+| 2026-01-19 | LTVINH24   | Merge branch 'feat/refactor' of https://github.com/LTVINH24/AIEmail into feat/refactor |       3       | AIEmail (Frontend) |
+| 2026-01-19 | DucToan137 | fix: snoozed email in Kanban view                                                      |       3       | AIEmail (Frontend) |
+| 2026-01-19 | LTVINH24   | fix: remove call api snooze when unread, unstar                                        |       1       | AIEmail (Frontend) |
+| 2026-01-19 | DucToan137 | fix: add sort, filter on mobile view.                                                  |       1       | AIEmail (Frontend) |
+| 2026-01-19 | DucToan137 | fix: add sort, filter on Kanban view                                                   |       3       | AIEmail (Frontend) |
+| 2026-01-19 | LTVINH24   | feat: add docker compose                                                               |       1       | AIEmail (Frontend) |
+| 2026-01-18 | LTVINH24   | feat: Multi-tab logout sync                                                            |       2       | AIEmail (Frontend) |
+| 2026-01-18 | LTVINH24   | feat: Navigate emails with keyboard shortcuts                                          |       2       | AIEmail (Frontend) |
+| 2026-01-18 | LTVINH24   | fix: do not create column whe choose exting label                                      |       2       | AIEmail (Frontend) |
+| 2026-01-18 | LTVINH24   | add: dockerfile for build image                                                        |       4       | AIEmail (Frontend) |
+| 2026-01-14 | LTVINH24   | chore: remove some toast                                                               |       1       | AIEmail (Frontend) |
+| 2026-01-14 | LTVINH24   | feat: open mail in gmail                                                               |       1       | AIEmail (Frontend) |
+| 2026-01-14 | LTVINH24   | fix: kanban column don't appaear after adding a new column                             |       2       | AIEmail (Frontend) |
+| 2026-01-13 | LTVINH24   | feat: synchronize kanban column                                                        |       3       | AIEmail (Frontend) |
+| 2026-01-13 | LTVINH24   | fix: update readed state for kanban view                                               |       1       | AIEmail (Frontend) |
+| 2026-01-13 | LTVINH24   | fix: update label when moving kanban card                                              |       2       | AIEmail (Frontend) |
+| 2026-01-08 | DucToan137 | feat: update UI Kanban view                                                            |       3       | AIEmail (Frontend) |
+| 2026-01-08 | DucToan137 | feat(snoozed): auto-refresh UI on snooze expiration                                    |       1       | AIEmail (Frontend) |
+| 2026-01-06 | DucToan137 | fix: move email to other column, update view detail email in kanban view               |       2       | AIEmail (Frontend) |
+| 2026-01-06 | DucToan137 | feat(ui): improve snoozed time display format                                          |       1       | AIEmail (Frontend) |
+| 2026-01-05 | DucToan137 | fix: enable email list scrolling when detail view is open                              |       1       | AIEmail (Frontend) |
+| 2026-01-05 | LTVINH24   | chore: replace tailwindcss class                                                       |       1       | AIEmail (Frontend) |
+| 2026-01-05 | LTVINH24   | feat: improve the smoothness of email navigation in the kanban view                    |       1       | AIEmail (Frontend) |
+| 2026-01-05 | LTVINH24   | fix: remove redundant API calls                                                        |       1       | AIEmail (Frontend) |
+| 2026-01-05 | LTVINH24   | fix: email list is loaded in reverse                                                   |       1       | AIEmail (Frontend) |
+| 2026-01-05 | LTVINH24   | fix: sort and filter in client                                                         |       3       | AIEmail (Frontend) |
+| 2026-01-05 | LTVINH24   | fix: Remove redundant API calls                                                        |       2       | AIEmail (Frontend) |
+| 2025-12-24 | DINH1022   | fix: update backend URL to aimail-be-3.onrender.com                                    |       3       | AIEmail (Frontend) |
+| 2025-12-24 | DucToan137 | feat(kanban): Implement rename column in Kanban view                                   |       4       | AIEmail (Frontend) |
+| 2025-12-24 | DucToan137 | fix(kanban): fix delete label                                                          |       4       | AIEmail (Frontend) |
+| 2025-12-24 | DucToan137 | fix(search): display email list after semantic search                                  |       3       | AIEmail (Frontend) |
+| 2025-12-23 | DucToan137 | feat(search): implement Semantic search and integrate service                          |       6       | AIEmail (Frontend) |
+| 2025-12-17 | DINH1022   | chore: update backend URL to aimail-be-2.onrender.com                                  |       1       | AIEmail (Frontend) |
+| 2025-12-17 | DINH1022   | fix : kanban view                                                                      |       1       | AIEmail (Frontend) |
+| 2025-12-17 | DINH1022   | feat : sort email                                                                      |       1       | AIEmail (Frontend) |
+| 2025-12-17 | DINH1022   | fix : clear filter                                                                     |       3       | AIEmail (Frontend) |
+| 2025-12-17 | DINH1022   | feat : filter unread email                                                             |       2       | AIEmail (Frontend) |
+| 2025-12-17 | DINH1022   | feat : filter attachment email                                                         |       4       | AIEmail (Frontend) |
+| 2025-12-15 | DINH1022   | feat: search with auto suggestion                                                      |       4       | AIEmail (Frontend) |
+| 2025-12-10 | DINH1022   | chore: update backend URL to aimail-be-1.onrender.com                                  |       3       | AIEmail (Frontend) |
+| 2025-12-10 | DINH1022   | fix : emailsummarymodal                                                                |       1       | AIEmail (Frontend) |
+| 2025-12-10 | DINH1022   | feat: design summary email UI                                                          |      13       | AIEmail (Frontend) |
+| 2025-12-10 | LTVINH24   | choice: create ai summary button                                                       |       2       | AIEmail (Frontend) |
+| 2025-12-10 | LTVINH24   | fix: loading kanbancolumn after unsnooze email                                         |       2       | AIEmail (Frontend) |
+| 2025-12-10 | LTVINH24   | fix: change snoozed button in Snooozed label                                           |       4       | AIEmail (Frontend) |
+| 2025-12-10 | DucToan137 | fix(snooze): create label snoozed                                                      |       4       | AIEmail (Frontend) |
+| 2025-12-10 | DucToan137 | fix(kanban,mailboxes): create/delete labels                                            |       4       | AIEmail (Frontend) |
+| 2025-12-10 | DucToan137 | fix(snooze): drag and drop email card between 2 column Snoozed, Inbox                  |       1       | AIEmail (Frontend) |
+| 2025-12-09 | DucToan137 | feat(kanban): add Snooze modal & drag-to-snooze/unsnooze handling                      |       3       | AIEmail (Frontend) |
+| 2025-12-09 | DucToan137 | fix: send mail                                                                         |       3       | AIEmail (Frontend) |
+| 2025-12-09 | DucToan137 | feat(snooze): connect services                                                         |       8       | AIEmail (Frontend) |
+| 2025-12-09 | LTVINH24   | feat: delete column kanban                                                             |       1       | AIEmail (Frontend) |
+| 2025-12-09 | LTVINH24   | feat: create new column kanban                                                         |       4       | AIEmail (Frontend) |
+| 2025-12-09 | DucToan137 | Merge pull request #4 from LTVINH24/revert-2-feature/connect-email-service             |      13       | AIEmail (Frontend) |
+| 2025-12-09 | DucToan137 | Revert "Feature/connect email service"                                                 |      13       | AIEmail (Frontend) |
+| 2025-12-09 | LTVINH24   | feat: complete implement kanban layout                                                 |       2       | AIEmail (Frontend) |
+| 2025-12-09 | LTVINH24   | fix : set min-width for Kanban column and can scroll for kanban board                  |       3       | AIEmail (Frontend) |
+| 2025-12-09 | LTVINH24   | fix: filter some custom lable                                                          |       3       | AIEmail (Frontend) |
+| 2025-12-09 | DucToan137 | Merge pull request #2 from LTVINH24/feature/connect-email-service                      |      13       | AIEmail (Frontend) |
+| 2025-12-09 | LTVINH24   | feat: define default label mail box                                                    |       3       | AIEmail (Frontend) |
+| 2025-12-09 | LTVINH24   | feat: create kanban view layout                                                        |       5       | AIEmail (Frontend) |
+| 2025-12-04 | DINH1022   | clean                                                                                  |      10       | AIEmail (Frontend) |
+| 2025-12-03 | DINH1022   | fix redirect                                                                           |       7       | AIEmail (Frontend) |
+| 2025-12-03 | DINH1022   | fix callback                                                                           |       5       | AIEmail (Frontend) |
+| 2025-12-03 | DINH1022   | oauth flow                                                                             |      10       | AIEmail (Frontend) |
+| 2025-12-02 | DucToan137 | feat(email): lazy-load thread details + skeleton UI                                    |       4       | AIEmail (Frontend) |
+| 2025-12-02 | DucToan137 | fix: (To/Cc/Bcc) in send mail                                                          |       2       | AIEmail (Frontend) |
+| 2025-12-02 | DucToan137 | use cookieManager.getAccessToken()                                                     |       1       | AIEmail (Frontend) |
+| 2025-12-02 | DucToan137 | feat(ui): dynamic routes, delete confirmation                                          |       7       | AIEmail (Frontend) |
+| 2025-12-02 | DucToan137 | feat(email): support cc/bcc in types & parsing, send attachment handling               |       4       | AIEmail (Frontend) |
+| 2025-12-01 | DucToan137 | feat: backend integration                                                              |       9       | AIEmail (Frontend) |
+| 2025-11-19 | LTVINH24   | fix: remove some variable not use                                                      |       3       | AIEmail (Frontend) |
+| 2025-11-19 | LTVINH24   | fix: remove toast ui library                                                           |       1       | AIEmail (Frontend) |
+| 2025-11-19 | LTVINH24   | fix: BASE_URL variable enviroment                                                      |       1       | AIEmail (Frontend) |
+| 2025-11-19 | LTVINH24   | change: move some file to dashboard component folder                                   |       7       | AIEmail (Frontend) |
+| 2025-11-19 | LTVINH24   | Merge pull request #1 from DucToan137/main                                             |      20       | AIEmail (Frontend) |
+| 2025-11-19 | DucToan137 | feat:login with email, password, register, logout                                      |      20       | AIEmail (Frontend) |
+| 2025-11-18 | LTVINH24   | initial project and mock email dashboard ui                                            |      39       | AIEmail (Frontend) |
 
 ---
 
